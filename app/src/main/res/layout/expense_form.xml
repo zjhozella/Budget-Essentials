@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_margin="10dp"
+                    android:layout_height="48dp">
+
+                    <EditText
+                        android:id="@+id/name_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="Name of Expense"
+                        android:inputType="textNoSuggestions|textCapWords" />
+
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/amount_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="123.00"
+                        android:inputType="textNoSuggestions|numberDecimal" />
+
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_margin="10dp"
+                    android:layout_height="wrap_content">
+
+                    <Spinner
+                        android:id="@+id/ExpenseOccurrenceSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/gray_500"
+                        android:minHeight="48dp"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_margin="10dp"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/note_field"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="Additional Notes"
+                        android:inputType="textMultiLine|textNoSuggestions"
+                        android:singleLine="false" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnCancelExpense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_color"
+                        android:text="CANCEL"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/btnSaveExpense"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient_color"
+                        android:text="SAVE"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:textColor="@color/black"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

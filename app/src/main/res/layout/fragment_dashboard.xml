@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="5dp"
+        android:elevation="10dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Income"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/black"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expense"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/black"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/DashBoardIncomeAmountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$000.00"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/green" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/DashBoardExpenseAmountText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$000.00"
+                        android:textAppearance="?android:textAppearanceLarge"
+                        android:textColor="@color/red" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/FloatingActionButtonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/expense_ft_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/gradient_color"
+            android:padding="5dp"
+            android:text="Add New Expense"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/income_ft_btn"
+            app:layout_constraintEnd_toStartOf="@+id/expense_ft_btn" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/expense_ft_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#E62E2E"
+            android:elevation="6dp"
+            android:src="@drawable/ic_expense"
+            android:visibility="invisible"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toTopOf="@+id/income_ft_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:pressedTranslationZ="12dp" />
+
+        <TextView
+            android:id="@+id/income_ft_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="38dp"
+            android:background="@drawable/gradient_color"
+            android:padding="5dp"
+            android:text="Add New Income"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/white"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/fb_main_plus_btn"
+            app:layout_constraintEnd_toStartOf="@+id/income_ft_btn" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/income_ft_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="28dp"
+            android:backgroundTint="@color/green"
+            android:elevation="6dp"
+            android:src="@drawable/ic_income"
+            android:visibility="invisible"
+            app:fabSize="mini"
+            app:layout_constraintBottom_toTopOf="@+id/fb_main_plus_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:pressedTranslationZ="12dp">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fb_main_plus_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="36dp"
+            android:backgroundTint="#9A6ACA"
+            android:src="@drawable/ic_plus"
+            app:fabSize="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck">
+
+        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+        <Button
+            android:id="@+id/settings_button"
+            android:layout_width="51dp"
+            android:layout_height="48dp"
+            app:icon="@drawable/ic_settings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
